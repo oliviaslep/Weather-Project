@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Weather Window</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather Window <img src="images/weather-window.jpg" alt="Weather window" width="70"></h1>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-6">
+          <form>
+                       <input
+              type="text"
+               id="city-input"
+               class= "searchCity"
+              placeholder="🌎What's the temperature in..."
+              size="40"
+              autocomplete="off"
+            />
+            <input type="submit" class="btn btn-info" value="Search" />
+          </form>
+        </div>
+      </div>
+      <br /><br />
+      <div class="firstLine row">
+        <div class="col-2"></div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="location">🌧️Warsaw</h5>
+              <p id="current-date" class="card-text">
+               Sun 11:00
+                </p>
+                <p class= card-text1>
+                Clouds
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card" style="width: 18rem"><br>
+            <h5 class="tempo">12°C</h5>
+            <div class=scala1>
+            <button class="scala scalaC">°C  </button>/
+            <button class="scala scalaF">°F</button>
+      </div>
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+                <div class="col-2"> Monday <br>
+                  <img class="icon" src="images/icon1.png" alt="Weather icon" width="60">    
+                </div>
+                <div class="col-2">  Tuesday  <br>
+                    <img class="icon" src="images/icon2.jpg" alt="Weather icon" width="60"> 
+                </div>
+                <div class="col-2">  Wednesday <br>
+                         <img class="icon" src="images/icon3.png" alt="Weather icon" width="60"> 
+                </div>
+                <div class="col-2"> Thursday <br>
+                     <img class="icon" src="images/icon3.png" alt="Weather icon" width="60"> 
+                     </div>
+                <div class="col-2"> Friday <br>
+                     <img class="icon" src="images/icon4.png" alt="Weather icon" width="60"> 
+                     </div>
+                <div class="col-1"></div>
+        </div>
+        <br><br>
+    <p class="end">If there was nothing for you today, then check again tomorrow ☀️</p>
+ <script src="src/script.js"></script>
+  </body>
+</html>
