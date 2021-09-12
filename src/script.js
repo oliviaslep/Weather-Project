@@ -31,16 +31,33 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?`;
 function changeCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input").value;
-  let h5 = document.querySelector("h5");
+  let h5 = document.querySelector(".location");
   h5.innerHTML = `${cityInput}`;
   axios
     .get(`${apiUrl}q=${cityInput}&units=metric&appid=${apiKey}`)
     .then(showTemperature);
 }
 function showTemperature(response) {
+  console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
+  let humidity = Math.round(response.data.main.humidity);
+  let wind = Math.round(response.data.wind.speed);
   let temperatureElement = document.querySelector(".tempo");
   temperatureElement.innerHTML = `${temperature}°C`;
+  let temperatureEmoji = document.querySelector(".location-icon");
+  if (temperature > 25) {
+    temperatureEmoji.innerHTML = "☀️";
+  } else {
+    if (temperature > 5) {
+      temperatureEmoji.innerHTML = "☁️";
+    } else {
+      temperatureEmoji.innerHTML = "❄️";
+    }
+  }
+  let windElement = document.querySelector("#wind-strength");
+  windElement.innerHTML = `Wind: ${wind} kmh`;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `Humidity: ${humidity}%`;
 }
 
 let form = document.querySelector("form");
