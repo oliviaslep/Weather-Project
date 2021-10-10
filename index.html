@@ -12,12 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <title>Weather Window</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Weather Window <img src="images/weather-window.jpg" alt="Weather window" width="70"></h1>
       <div class="row">
         <div class="col-2"></div>
         <div class="col-6">
@@ -38,15 +36,17 @@
       <div class="firstLine row">
         <div class="col-2"></div>
         <div class="col-3">
+          <div class="cityName">
           <div class="card" style="width: 18rem">
             <div class="card-body">
               <h5 class="location-icon"></h5>
-              <h5 class="location">Warsaw</h5>
+              <h5 class="location"></h5>
+              </div>
               <p id="current-date" class="card-text">
-               Sun 11:00
+  
                 </p>
                 <p class= card-text1>
-                Clouds
+                
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@
           <div class="card" style="width: 18rem"><br>
             <ul>
               <li>
-            <h5 class="tempo">12°C</h5>
+            <h5 class="tempo"></h5>
             </li>
             <li>
             <div class=scala1>
@@ -75,24 +75,8 @@ Wind:
             </div>
           </div>
         </div>
-        <div class="row">
-            <div class="col-1"></div>
-                <div class="col-2"> Monday <br>
-                  <img class="icon" src="images/icon1.png" alt="Weather icon" width="60">    
-                </div>
-                <div class="col-2">  Tuesday  <br>
-                    <img class="icon" src="images/icon2.jpg" alt="Weather icon" width="60"> 
-                </div>
-                <div class="col-2">  Wednesday <br>
-                         <img class="icon" src="images/icon3.png" alt="Weather icon" width="60"> 
-                </div>
-                <div class="col-2"> Thursday <br>
-                     <img class="icon" src="images/icon3.png" alt="Weather icon" width="60"> 
-                     </div>
-                <div class="col-2"> Friday <br>
-                     <img class="icon" src="images/icon4.png" alt="Weather icon" width="60"> 
-                     </div>
-                <div class="col-1"></div>
+        <div id="forecast" class="forecast">
+          
         </div>
         <br><br>
     <p class="end">If there was nothing for you today, then check again tomorrow ☀️</p>
